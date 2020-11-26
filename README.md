@@ -30,3 +30,4 @@ Follow the steps below to set up your development environment:
   -pageMeta error: sections, tables, and data will NOT render. A header will display "No Sections Available"
   -animalData error: sections will render, however tables will not. A header in each section will display "No Data Available"
 7. The underlying numerical value that contains a decimal is retained in an animalData state variable which is referenced by the component to render a number with the user's preferred decimal places. A calculation would be performed in the same manner (component referencing the state variable to get the true value instead of the rendered one)
+8. It is assumed the user understands (per the instructions) what the data means and its relevance to the header name and data description. For example, the user is expected to know what 'Sire' refers to (since in this particular example the name and description are the same)
