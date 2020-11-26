@@ -7,15 +7,13 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Thank you for trying out my site! Click on the link below to return to the Dashboard
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/dashboard"
         >
-          Learn React
+          Dashboard
         </a>
       </header>
     </div>

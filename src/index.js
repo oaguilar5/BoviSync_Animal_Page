@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { createBrowserHistory } from "history";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
+
+
+import './assets/css/dashboard.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+import Dashboard from './views/Dashboard.jsx';
+import App from './App.js'
+
+var itemMetaUrl = 'https://bovisync.bitbucket.io/sample_data/item_meta.json'
+var pageMetaUrl = 'https://bovisync.bitbucket.io/sample_data/page_meta.json'
+var animalDataUrl = 'https://bovisync.bitbucket.io/sample_data/animal_data.json'
+
+
+const hist = createBrowserHistory();
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  <Router history={hist}>
+    <Switch>
+      <Route path="/dashboard" render={props => <Dashboard {...props} itemMetaUrl={itemMetaUrl} pageMetaUrl={pageMetaUrl} animalDataUrl={animalDataUrl}/>} />
+      <Route path="/app" render={props => <App {...props}  />} />
+      <Redirect from="/" to="/dashboard"/>
+    </Switch>
+  </Router>,
+  document.getElementById("root") || document.createElement('div')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

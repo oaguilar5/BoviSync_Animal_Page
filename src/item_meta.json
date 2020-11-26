@@ -1,0 +1,162 @@
+[
+    {
+      "dataType": "Integer",
+      "name": "Eartag",
+      "tags": [],
+      "aggregationFunction": "count",
+      "shortName": "EART",
+      "link": "/cowpage/id/ANIMALID/",
+      "units": null,
+      "description": "The animal's eartag number. Double clicking this cell will open the animal page."
+    },
+    {
+      "dataType": "Integer",
+      "name": "Pen",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "Pen",
+      "link": "",
+      "units": null,
+      "description": "The pen which the animal is in"
+    },
+    {
+      "dataType": "Integer",
+      "name": "Days in milk",
+      "tags": [],
+      "aggregationFunction": "average",
+      "shortName": "DIM",
+      "link": "",
+      "units": "DAY",
+      "description": "Returns days in milk for animals which are currently in milk, and previous lactation length for animals not currently in milk"
+    },
+    {
+      "dataType": "Integer",
+      "name": "Lactation number",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "LACT",
+      "link": "",
+      "units": null,
+      "description": "Lactation number"
+    },
+    {
+      "dataType": "String",
+      "name": "Breed",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "BRD",
+      "link": "",
+      "units": null,
+      "description": "The breed of the animal, only if the animal is at least 3/4 purebred. This item will be blank for crossbred animals."
+    },
+    {
+      "dataType": "String",
+      "name": "Repro status",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "Repro",
+      "link": "",
+      "units": null,
+      "description": "Repro status"
+    },
+    {
+      "dataType": "Integer",
+      "name": "Days Carried Calf",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "DCC",
+      "link": "",
+      "units": "DAY",
+      "description": "Days Carried Calf"
+    },
+    {
+      "dataType": "String",
+      "name": "Sire",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "SIR",
+      "link": "",
+      "units": null,
+      "description": "Sire"
+    },
+    {
+      "dataType": "String",
+      "name": "Dam EID Number",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "DamEID",
+      "link": "",
+      "units": null,
+      "description": "Dam EID Number"
+    },
+    {
+      "dataType": "String",
+      "name": "Number of Barn",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "Barn",
+      "link": null,
+      "units": null,
+      "description": "The barn number the animal is located in"
+    },
+    {
+      "dataType": "String",
+      "name": "Location",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "LOCAT",
+      "link": "",
+      "units": null,
+      "description": "The farm where the animal is currently located."
+    },
+    {
+      "dataType": "String",
+      "name": "Name of Barn",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "BarnNm",
+      "link": null,
+      "units": null,
+      "description": "The name of the barn this animal is located in."
+    },
+    {
+      "dataType": "Date/Time",
+      "name": "Last Repro Check date (this lactation)",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "REPRDate",
+      "link": null,
+      "units": null,
+      "description": "The date of the last Repro Check event (this lactation)"
+    },
+    {
+      "dataType": "Integer",
+      "name": "Age in months",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "AGEMO",
+      "link": "",
+      "units": null,
+      "description": "Age in months"
+    },
+    {
+      "dataType": "Integer",
+      "name": "API ID",
+      "tags": [],
+      "aggregationFunction": null,
+      "shortName": "ApiId",
+      "link": "",
+      "units": null,
+      "description": "Animal id for use with bovisync api."
+    },
+    {
+      "dataType": "Decimal",
+      "name": "Energy Corrected Milk",
+      "tags": [],
+      "aggregationFunction": "average",
+      "shortName": "ECM",
+      "link": "",
+      "units": "LB",
+      "description": "Energy Corrected Milk at last test day this lactation"
+    }
+  ]
