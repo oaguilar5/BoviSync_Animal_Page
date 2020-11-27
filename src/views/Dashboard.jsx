@@ -34,7 +34,6 @@ import {
     ModalBody,
     ModalFooter,
     Navbar,
-    NavbarToggler,
     Nav,
     NavItem,
     NavLink,
@@ -242,11 +241,10 @@ class Dashboard extends React.Component {
     return (
       <>
         <div className={className}>
-        <Navbar color="light" light expand="lg">
+        <Navbar color="light" light expand="xs">
           <div className="logo">
             <a href="/app"><img src="/images/logo_1.png" alt="Animal Page" /></a>
           </div>
-            <NavbarToggler />
             <Collapse navbar>
               <Nav className="mr-auto" navbar>
                 <NavItem>
@@ -264,7 +262,7 @@ class Dashboard extends React.Component {
 
               </Nav>
               <div className="account-link">
-                <UncontrolledDropdown>
+                <UncontrolledDropdown inNavbar>
                   <DropdownToggle
                     color="default"
                     data-toggle="dropdown"
@@ -273,7 +271,6 @@ class Dashboard extends React.Component {
                     <div className="user-photo">
                       <img alt="User" src="/images/user-icon.png" />
                     </div>
-                    <p className="d-lg-none">Log out</p>
                   </DropdownToggle>
                   <DropdownMenu className="dropdown-navbar" right tag="ul">
                     <DropdownItem header >John Doe</DropdownItem>
@@ -300,6 +297,7 @@ class Dashboard extends React.Component {
                     <CardHeader><b>Preferences</b></CardHeader>
                     <CardBody>
                         <p>{this.state.welcomeMsg}</p>
+                        <Row><Col md="4"><Label><b>Instructions:</b></Label></Col></Row>
                         <p>{this.state.infoMsg}</p>
                         <Row>
                             <Col md="2">
@@ -364,7 +362,7 @@ class Dashboard extends React.Component {
                                 </Input>
                             </Col>
                             <Col md="2">
-                                <Label>Specify Unknown Values As</Label>
+                                <Label>Unknown Values As</Label>
                                 <Input 
                                     type="text" 
                                     id="dataUnknown" 

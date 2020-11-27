@@ -1,9 +1,12 @@
 
+
+/* GLOBALS */
 #root {
     background-color: #f8f9fa;
 }
 
-.account-link {
+
+  .account-link {
     position: absolute;
     right: 1%;
     top: 1%;
@@ -11,12 +14,37 @@
     background-color: inherit;
     text-align: right;
   }
+
+
   .navbar {
       margin-bottom: 2%;
   }
   
   .navbar-collapse {
     margin-left: 35%;
+  }
+
+  @media screen and (max-width: 1400px) {
+  
+  .navbar-collapse {
+    margin-left: 25%;
+  }
+
+  .dashboard-view .preferences label {
+    font-size: 0.8rem;
+}
+  }
+
+  @media screen and (max-width: 770px) {
+    .navbar {
+      margin-bottom: 10%;
+  }
+  
+  .navbar-collapse {
+    margin-left: 1%;
+    font-size:0.6rem;  
+}
+
   }
   
   
@@ -31,7 +59,7 @@
   }
 
   .user-photo img {
-    width: 100%;
+    width: 90%;
   }
 
   .logo {
@@ -39,9 +67,10 @@
   }
   
   .logo img {
-    height: 4rem;
-    
+    height: 3rem;
   }
+
+  /* DASHBOARD PAGE */
 
 .dashboard-view  {
     padding: 1%;
@@ -55,6 +84,9 @@
 .dashboard-view .no-data {
     text-align: center;
 }
+
+
+/* SECTION CARD */
 
 .dashboard-section .section-card {
   width: 90%;
@@ -73,6 +105,18 @@
     position: absolute;
     right: 2%;
     font-weight: 800;
+}
+
+.dashboard-section .section-card .card-body {
+  margin-left:2.5%;
+  margin-right:2.5%;
+  padding-left: 0;
+  padding-right: 0;
+  overflow-y: hidden;
+}
+
+.dashboard-section .section-card .card-body table {
+  margin: 0;
 }
 
 .dashboard-section .section-card th {

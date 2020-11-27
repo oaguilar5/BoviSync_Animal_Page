@@ -44,6 +44,15 @@ class Section extends React.Component {
         };
       }
 
+    /**
+         * Name: getDataElement
+         * Description: Helper function for rendered shortName to reference animalData map...
+         * Numerical values are evaluated against low/high thresholds and return color-formatted values
+         * 
+         * @params item - shortName primary key that maps to a value in animalData
+         * @requires animalData map
+         * @returns string - dataUnknown definition or actual value
+    **/
       getDataElement = item => {
         let retVal = this.props.dataUnknown;
         let data = this.props.animalData[item];
@@ -63,6 +72,15 @@ class Section extends React.Component {
         return retVal;
       }
 
+    /**
+         * Name: caculateNumericalThreshold
+         * Description: Evaluates number against low/high thresholds and returns the user's -
+         * preferred color for said thresholds
+         * 
+         * @params number value
+         * @requires none - low/high thresholds and color preferences do not need to be set
+         * @returns string - color (if any) defined by the user for said threshold
+    **/
       caculateNumericalThreshold = number => {
         let color = ""
         try {
@@ -80,6 +98,14 @@ class Section extends React.Component {
         return color
       }
 
+     /**
+         * Name: getDataName
+         * Description: Helper function activated by hovering over table header to get full column name
+         * 
+         * @params item - shortName primary key
+         * @requires itemMeta - reconstructed map with shortName for keys that map to metadata values
+         * @returns string - if mapped, returns the item's name prop else 'Unknown Name'
+    **/
       getDataName = item => {
         let retVal = "Unknown Name";
         if (typeof this.props.itemMeta[item] !== 'undefined')
@@ -87,6 +113,14 @@ class Section extends React.Component {
         return retVal;
       }
 
+    /**
+         * Name: getDataDescription
+         * Description: Helper function activated by hovering over table data item to get description
+         * 
+         * @params item - shortName primary key
+         * @requires itemMeta - reconstructed map with shortName for keys that map to metadata values
+         * @returns string - if mapped, returns the item's description prop else 'Unknown Description'
+    **/
       getDataDescription = item => {
         let retVal = "Unknown Description";
         if (typeof this.props.itemMeta[item] !== 'undefined')
@@ -94,6 +128,14 @@ class Section extends React.Component {
         return retVal;
       }
 
+    /**
+         * Name: toggleCard
+         * Description: Triggered by clicking on card header, negates boolean which defines cardbody visibility
+         * 
+         * @params none
+         * @requires none
+         * @returns none - negates the 'display' state variable
+    **/
       toggleCard = () => {
           this.setState(prevState => { return {display: !prevState.display}})
       }

@@ -30,13 +30,13 @@ test('should test Dashboard img count', () => {
 test('should test Dashboard p count', () => {
     fetch.mockReject(() => Promise.reject("API is down"));
     const wrapper = shallow(<Dashboard />);
-    expect(wrapper.find("p").length).toEqual(3);
+    expect(wrapper.find("p").length).toEqual(2);
 });
 
 test('should test Dashboard label count', () => {
     fetch.mockReject(() => Promise.reject("API is down"));
     const wrapper = shallow(<Dashboard />);
-    expect(wrapper.find("Label").length).toEqual(6);
+    expect(wrapper.find("Label").length).toEqual(7);
 });
 
 test('should test Dashboard input count', () => {

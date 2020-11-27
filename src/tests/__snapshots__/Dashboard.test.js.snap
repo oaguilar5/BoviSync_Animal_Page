@@ -7,7 +7,7 @@ exports[`should test Dashboard component snapshot 1`] = `
   >
     <Navbar
       color="light"
-      expand="lg"
+      expand="xs"
       light={true}
       tag="nav"
     >
@@ -23,10 +23,6 @@ exports[`should test Dashboard component snapshot 1`] = `
           />
         </a>
       </div>
-      <NavbarToggler
-        tag="button"
-        type="button"
-      />
       <Collapse
         appear={false}
         enter={true}
@@ -95,7 +91,9 @@ exports[`should test Dashboard component snapshot 1`] = `
         <div
           className="account-link"
         >
-          <UncontrolledDropdown>
+          <UncontrolledDropdown
+            inNavbar={true}
+          >
             <DropdownToggle
               aria-haspopup={true}
               caret={true}
@@ -110,11 +108,6 @@ exports[`should test Dashboard component snapshot 1`] = `
                   src="/images/user-icon.png"
                 />
               </div>
-              <p
-                className="d-lg-none"
-              >
-                Log out
-              </p>
             </DropdownToggle>
             <DropdownMenu
               className="dropdown-navbar"
@@ -223,6 +216,49 @@ exports[`should test Dashboard component snapshot 1`] = `
           <p>
             Welcome! Please specify your preferences below
           </p>
+          <Row
+            tag="div"
+            widths={
+              Array [
+                "xs",
+                "sm",
+                "md",
+                "lg",
+                "xl",
+              ]
+            }
+          >
+            <Col
+              md="4"
+              tag="div"
+              widths={
+                Array [
+                  "xs",
+                  "sm",
+                  "md",
+                  "lg",
+                  "xl",
+                ]
+              }
+            >
+              <Label
+                tag="label"
+                widths={
+                  Array [
+                    "xs",
+                    "sm",
+                    "md",
+                    "lg",
+                    "xl",
+                  ]
+                }
+              >
+                <b>
+                  Instructions:
+                </b>
+              </Label>
+            </Col>
+          </Row>
           <p>
             Hover over any table header to view the data item name. Hover over any table data item to view its description.
           </p>
@@ -460,7 +496,7 @@ exports[`should test Dashboard component snapshot 1`] = `
                   ]
                 }
               >
-                Specify Unknown Values As
+                Unknown Values As
               </Label>
               <Input
                 id="dataUnknown"
